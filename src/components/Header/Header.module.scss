@@ -1,0 +1,14 @@
+@import './src/styles/variables';
+@import './src/styles/mixins';
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include size(100%, 100px);
+  background: $main-color;
+  margin-bottom: 40px;
+  .title {
+    @include font(50px, bold, italic);
+  }
+}

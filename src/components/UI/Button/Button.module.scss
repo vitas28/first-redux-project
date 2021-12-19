@@ -1,0 +1,27 @@
+@import './src/styles/mixins';
+@import './src/styles/variables';
+
+.button {
+  @include size(70px, 40px);
+  @include font(20px, regular, normal);
+  border-radius: 10px;
+  cursor: pointer;
+  border: 0;
+  color: white;
+}
+
+.add {
+  background-color: cornflowerblue;
+  transition: $transition;
+  &:hover {
+    background-color: blue;
+  }
+}
+
+.delete {
+  background-color: red;
+  transition: $transition;
+  &:hover {
+    background-color: #a80303;
+  }
+}

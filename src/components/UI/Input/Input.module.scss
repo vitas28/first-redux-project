@@ -1,0 +1,16 @@
+@import './src/styles/mixins';
+
+.input {
+  @include font(20px, semi-bold, italic);
+  margin: 10px;
+  padding: 10px;
+  @include border(2px, solid, #000, 5px);
+  &:focus {
+    outline: none;
+    margin: 9px;
+    @include border(3px, solid, #000, 5px);
+  }
+  &::placeholder {
+    color: #a9a8a8;
+  }
+}

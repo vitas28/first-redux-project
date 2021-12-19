@@ -1,0 +1,71 @@
+@import 'variables';
+@import 'mixins';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.aside {
+  @include size(100%, 100vh);
+  background-color: $aside-color;
+}
+
+.content {
+  place-items: center;
+  padding: 20px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  background: $main-color;
+  border-radius: 15px;
+}
+
+.form-page {
+  text-align: center;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: $main-color;
+  border-radius: 15px;
+  transform: translate(-50%, -50%);
+  @include size(800px, 400px);
+  .form {
+    margin-top: 20px;
+    .form-header {
+      input {
+        width: 75%;
+      }
+    }
+  }
+  h1 {
+    @include font(40px, 700, italic);
+  }
+  .wrapper {
+    margin-top: 20px;
+    place-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    input {
+      width: 80%;
+    }
+  }
+  button {
+    margin-top: 20px;
+  }
+}
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include size(800px, 70px);
+  margin: 10px auto;
+}
+
+.addition {
+  @include font(25px, 700, oblique);
+  margin-right: 10px;
+}

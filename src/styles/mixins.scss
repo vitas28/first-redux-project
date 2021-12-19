@@ -1,0 +1,16 @@
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin border($width, $type, $color, $radius) {
+  border: $width $type $color;
+  border-radius: $radius;
+}
+
+@mixin font($size, $weight, $style) {
+  font-size: $size;
+  font-weight: $weight;
+  font-style: $style;
+}
+
